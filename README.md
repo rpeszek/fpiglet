@@ -2,7 +2,7 @@ Fpiglet 0.1.
 FUNctional Programming in Groovy
 
 http://code.google.com/p/fpiglet/  (Good source of documentation for Fpiglet)
-https://github.com/rpeszek/fpiglet.git
+https://github.com/rpeszek/fpiglet.git  (Fpilget is migrating to GitHub)
 git@github.com:rpeszek/fpiglet.git
 
 
@@ -42,11 +42,13 @@ Gruesome is a simplified version of QuickCheck Property-based Testing library po
 
 
 Building:
+
 Eclipse project file is included, but you will need to make some classpath adjustments. 
 If you prefer IDE agnostic build tool, gradle build file is included as well (). 
 
-
 Source Tree Structure:
+
   src/groovy - Fpiglet source
   ext/gruesome -  a slightly modified copy of https://github.com/mcandre/gruesome together with its own (FreeBSD) license file.
-  test - All Fpiglet test files.
+  test - All Fpiglet unit test files.
+  resources - resource files used in tests
