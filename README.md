@@ -44,7 +44,7 @@ Gruesome is a simplified version of QuickCheck Property-based Testing library po
 Building:
 
 Gradle build file is included.
-Eclipse project file is included, but will require some classpath adjustments. 
+Eclipse project files are included, but may require some classpath adjustments. 
 
 
 Source Tree Structure:
