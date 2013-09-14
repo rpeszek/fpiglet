@@ -1,9 +1,9 @@
 Fpiglet 0.1.
 FUNctional Programming in Groovy
 
-http://code.google.com/p/fpiglet/  (Good source of documentation for Fpiglet)
-https://github.com/rpeszek/fpiglet.git  (Fpilget is migrating to GitHub)
-git@github.com:rpeszek/fpiglet.git
+* http://code.google.com/p/fpiglet/  (Good source of documentation for Fpiglet)
+* https://github.com/rpeszek/fpiglet.git  (Fpilget is migrating to GitHub)
+* git@github.com:rpeszek/fpiglet.git
 
 
 
@@ -11,24 +11,24 @@ Release 0.1 TOC:
 
  * (Implicitly) curried functions (Curried Functions will change the way you code!)
  * Functional Types accompanied by libraries of (curried) functions:
-   ** Maybe
-   ** Either
-   ** Lazy Functional Lists (FunList, ListFunctions)
+   * Maybe
+   * Either
+   * Lazy Functional Lists (FunList, ListFunctions)
  * Functional concepts:
-  ** Functor Polymorphism
-  ** Applicative Polymorphism
-  ** Monad Polymorphism
+  * Functor Polymorphism
+  * Applicative Polymorphism
+  * Monad Polymorphism
  * Concept-based functional libraries
-  ** Monadic function library
-  ** Applicative function library
+  * Monadic function library
+  * Applicative function library
  * Functor mapped functional list libraries (functional list library applied to other concepts):
-  ** Function library for Groovy Lists 
-  ** Function library for Strings 
-  ** Function library for InputStream
+  * Function library for Groovy Lists 
+  * Function library for Strings 
+  * Function library for InputStream
  * Expressions:
-  ** Monadic Comprehensions 
-  ** Functional if-then-elseif-then-else chains
-  ** Localized scope expressions
+  * Monadic Comprehensions 
+  * Functional if-then-elseif-then-else chains
+  * Localized scope expressions
 
 
 Dependencies: 
@@ -43,12 +43,13 @@ Gruesome is a simplified version of QuickCheck Property-based Testing library po
 
 Building:
 
-Eclipse project file is included, but you will need to make some classpath adjustments. 
-If you prefer IDE agnostic build tool, gradle build file is included as well (). 
+Gradle build file is included.
+Eclipse project file is included, but will require some classpath adjustments. 
+
 
 Source Tree Structure:
 
-  src/groovy - Fpiglet source
-  ext/gruesome -  a slightly modified copy of https://github.com/mcandre/gruesome together with its own (FreeBSD) license file.
-  test - All Fpiglet unit test files.
-  resources - resource files used in tests
+ * src/groovy - Fpiglet source
+ * ext/gruesome -  a slightly modified copy of https://github.com/mcandre/gruesome together with its own (FreeBSD) license file.
+ * test - All Fpiglet unit test files.
+ * resources - resource files used in tests
