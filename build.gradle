@@ -1,0 +1,53 @@
+apply plugin: 'groovy'
+
+sourceSets {
+  main {
+    groovy {
+      srcDirs = ['src/groovy']
+    }
+  }
+  
+  test {
+    groovy {
+	   srcDirs = ['test', 'ext/gruesome']
+	}
+  }
+}
+   
+   
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+   compile 'org.codehaus.groovy:groovy-all:2.0.5'
+   testCompile 'junit:junit:4.11'
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '1.6'
+}
+
+task groovydocs(type: Groovydoc){
+	source = sourceSets.main.allGroovy
+	use = false	
+	classpath = sourceSets.main.output + sourceSets.main.compileClasspath
+	link('http://code.google.com/p/fpiglet/', 'wiki')
+	header('Fpiglet 0.1 API')
+	footer("Compiled on ${new Date()}")
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+	 classifier = 'sources'
+	 from sourceSets.main.allSource
+}
+
+task testSourcesJar(type: Jar, dependsOn: classes) {
+	classifier = 'test-sources'
+	from sourceSets.test.allSource
+}
+
+task groovydocJar(type: Jar, dependsOn: groovydocs) {
+	classifier = 'groovydoc'
+	from groovydocs.destinationDir
+}

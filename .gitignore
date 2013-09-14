@@ -1,0 +1,8 @@
+# no dir and subdirectories
+target/
+docs/
+build/
+.gradle/
+.settings/
+#ingnore svn
+.svn*
