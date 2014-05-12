@@ -52,7 +52,7 @@ class Take {
 			else if(n==0) 
 				FunList.EMPTYLIST
 			else
-				l.build(l.head, { Take.takeC(n-1, l.getTail()) }) //Groovy call dispatch needs it with class name!
+				l.build(l.head, { Take.takeC(n-1, (n-1 ==0) ? FunList.EMPTYLIST: l.getTail()) }) //Groovy call dispatch needs it with class name!
 		}
 	}
 	

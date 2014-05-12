@@ -69,6 +69,7 @@ class InAndOutOfFunLists {
             i +=1;
             if(!current.empty) {
                 result.add(current.head);
+				if(fetchAll || i<n)
                 current = current.tail
             }
             else {

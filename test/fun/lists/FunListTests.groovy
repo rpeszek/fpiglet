@@ -265,4 +265,32 @@ class FunListTests extends GroovyTestCase{
 		def got2 =  f(list2).toString()
 		assert expected2 == got2
 	}
+	
+	//checks issue found in https://github.com/rpeszek/fpiglet/issues/1
+	void testFunListOutTakeDoesNotEvaluateExtraTail() {
+		def maxEvaluated
+		FunList divisibleBy7= filter{
+			maxEvaluated = it
+			it%7==0
+		}  << fpig.funlist.functions.Infinity.naturalNumbers()
+		
+		def sevenAndForteen = funlistOutTake(2) << divisibleBy7 //should not cause filter check on 21
+		assert maxEvaluated == 14
+		assert sevenAndForteen == [7, 14]
+	}
+	
+	//checks issue found in https://github.com/rpeszek/fpiglet/issues/1 when applied to plain take
+	void testTakeDoesNotEvaluateExtraTail() {
+		def maxEvaluated
+		FunList divisibleBy7= filter{
+			maxEvaluated = it
+			it%7==0
+		}  << fpig.funlist.functions.Infinity.naturalNumbers()
+		
+		def res2 = take(2) << divisibleBy7
+		res2.toString() //force evaluation, should not cause filter check on 21
+		assert [7, 14] == funlistOut << res2
+	    assert maxEvaluated == 14
+	}
+
 }
