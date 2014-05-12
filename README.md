@@ -1,10 +1,8 @@
 Fpiglet 0.1.
 FUNctional Programming in Groovy
 
-* http://code.google.com/p/fpiglet/  (Good source of documentation for Fpiglet)
-* https://github.com/rpeszek/fpiglet.git  (Fpilget is migrating to GitHub)
-* git@github.com:rpeszek/fpiglet.git
-
+* https://github.com/rpeszek/fpiglet.git
+* http://code.google.com/p/fpiglet/  (original/old project location)
 
 
 Release 0.1 TOC:
@@ -14,13 +12,10 @@ Release 0.1 TOC:
    * Maybe
    * Either
    * Lazy Functional Lists (FunList, ListFunctions)
- * Functional concepts:
-  * Functor Polymorphism
-  * Applicative Polymorphism
-  * Monad Polymorphism
- * Concept-based functional libraries
-  * Monadic function library
-  * Applicative function library
+ * Functional concepts (and Functional Combinator Libraries):
+  * Functor
+  * Applicative
+  * Monad
  * Functor mapped functional list libraries (functional list library applied to other concepts):
   * Function library for Groovy Lists 
   * Function library for Strings 
@@ -49,7 +44,7 @@ Eclipse project files are included, but may require some classpath adjustments.
 
 Source Tree Structure:
 
- * src/groovy - Fpiglet source
- * ext/gruesome -  a slightly modified copy of https://github.com/mcandre/gruesome together with its own (FreeBSD) license file.
- * test - All Fpiglet unit test files.
- * resources - resource files used in tests
+ * src/groovy/ - Fpiglet source
+ * ext/gruesome/ -  a slightly modified copy of https://github.com/mcandre/gruesome together with its own (FreeBSD) license file.
+ * test/ - All Fpiglet unit test files.
+ * resources/ - resource files used in tests
